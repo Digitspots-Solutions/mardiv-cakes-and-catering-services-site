@@ -1,0 +1,49 @@
+{
+  "businessName": "MARDIV CAKES AND CATERING SERVICES",
+  "industry": "Food & Catering",
+  "tone": "warm and inviting",
+  "tagline": "Creating Sweet Memories, One Cake at a Time",
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "copy": "Welcome to MARDIV CAKES AND CATERING SERVICES\n\nYour trusted partner for exquisite cakes and exceptional catering in Kaduna. From elegant wedding cakes to corporate catering events, we bring sweetness and satisfaction to every celebration.\n\nOrder Your Perfect Cake Today",
+      "imagePrompt": "A beautifully decorated three-tier Nigerian wedding cake with intricate fondant designs in gold and white, displayed on an elegant table with soft natural lighting, professional bakery setting in Kaduna Nigeria, photorealistic, high quality, warm ambiance",
+      "layout": "centered"
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "copy": "MARDIV CAKES AND CATERING SERVICES\n\nLocated in the heart of Igabi, Kaduna, MARDIV CAKES AND CATERING SERVICES is your premier destination for custom-made cakes and comprehensive catering solutions. We specialize in creating memorable culinary experiences for weddings, birthdays, corporate events, and all special occasions.\n\nOur expert bakers and caterers combine traditional Nigerian flavors with modern techniques to deliver products that not only look stunning but taste absolutely divine. Every cake is baked fresh to order, and every catering menu is tailored to your specific needs and preferences.\n\nWith years of experience serving the Kaduna community, we pride ourselves on quality ingredients, attention to detail, and customer satisfaction. Whether you need a simple birthday cake or full-service catering for 500 guests, MARDIV is here to make your event unforgettable.",
+      "imagePrompt": "A warm, inviting Nigerian bakery kitchen with professional bakers decorating colorful cakes, stainless steel equipment, fresh ingredients on marble countertops, bright natural lighting through windows, Kaduna Nigeria setting, photorealistic, professional food photography",
+      "layout": "split"
+    },
+    {
+      "id": "services",
+      "name": "Our Services",
+      "copy": "What We Offer\n\nCustom Cakes\nWedding cakes, birthday cakes, anniversary cakes, and celebration cakes designed to your exact specifications. Choose from vanilla, chocolate, red velvet, fruit cake, and more. Custom designs, fondant decorations, and edible prints available.\n\nCatering Services\nFull-service catering for weddings, corporate events, parties, and social gatherings. Nigerian cuisine, continental dishes, small chops, buffet setups, and service staff available. Customizable menus to suit your budget and guest count.\n\nSmall Chops & Pastries\nPerfect for meetings, cocktails, and intimate gatherings. Includes puff puff, samosa, spring rolls, chicken wings, mini burgers, fish rolls, and assorted pastries. Fresh, hot, and delivered on time.\n\nCorporate Catering\nProfessional catering solutions for conferences, seminars, training sessions, and office events. Reliable service, quality food, and timely delivery guaranteed.\n\nEvent Planning Support\nWe work with event planners and venues across Kaduna to ensure seamless coordination. Consultation services available to help you plan the perfect menu.",
+      "imagePrompt": "A vibrant display of Nigerian small chops and pastries arranged on elegant serving platters, including puff puff, samosas, spring rolls, mini burgers, colorful cocktail setup, professional catering presentation, Kaduna Nigeria, photorealistic food photography, appetizing lighting",
+      "layout": "grid"
+    },
+    {
+      "id": "testimonials",
+      "name": "What Our Clients Say",
+      "copy": "Client Testimonials\n\n\"MARDIV made my wedding cake and it was absolutely stunning! Everyone kept asking where we got it from. The taste was even better than the design. Highly recommended!\" - Blessing O., Kaduna\n\n\"We've used MARDIV for three corporate events now and they never disappoint. Professional service, delicious food, and always on time. They're our go-to caterers.\" - Chinedu A., Business Executive\n\n\"The best birthday cake my daughter has ever had! MARDIV brought her princess theme to life perfectly. Thank you for making her day special.\" - Fatima M., Igabi\n\n\"Outstanding catering service for our church anniversary. They fed over 300 people with such grace and excellence. God bless MARDIV!\" - Pastor John K., Kaduna",
+      "imagePrompt": "A collage of happy Nigerian clients at celebrations holding beautifully decorated cakes, diverse group of people smiling at weddings and parties, warm atmosphere, Kaduna setting, photorealistic, professional event photography, joyful expressions",
+      "layout": "cards"
+    },
+    {
+      "id": "contact",
+      "name": "Contact Us",
+      "copy": "Get In Touch With MARDIV\n\nReady to order your perfect cake or discuss your catering needs? We're here to help make your event exceptional.\n\nVisit Our Location:\n#5 Mohammed Kida House opposite TCN Mando Kaduna, Igabi, Nigeria\n\nCall or WhatsApp:\n0706 815 7380\n\nBusiness Hours:\nMonday - Saturday: 8:00 AM - 6:00 PM\nSunday: By Appointment Only\n\nNote: Please place cake orders at least 72 hours in advance. For large catering events, we recommend booking 2-4 weeks ahead to ensure availability.\n\nWe look forward to serving you!",
+      "imagePrompt": "A welcoming Nigerian bakery storefront with clear signage for MARDIV CAKES AND CATERING SERVICES, located near TCN Mando in Kaduna, bright daylight, clean professional exterior, customers entering, photorealistic, inviting atmosphere, Northern Nigerian architecture",
+      "layout": "centered"
+    }
+  ],
+  "contact": {
+    "phone": "0706 815 7380",
+    "email": "",
+    "address": "#5 Mohammed Kida House opposite TCN Mando Kaduna, Igabi, Nigeria",
+    "whatsapp": "https://wa.me/2347068157380"
+  }
+}
