@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARDIV CAKES AND CATERING SERVICES - Creating Sweet Memories, One Cake at a Time</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #44290a;
+            --color-accent: #d5831b;
+            --color-bg: #FBF0E8;
+            --color-text: #342008;
+            --color-surface: #571007;
+            --color-secondary-accent: #375c21;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Source Sans 3', sans-serif;
+            --border-radius: 18px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.6;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(251, 240, 232, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(68, 41, 10, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-text);
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: var(--color-bg);
+            box-shadow: -2px 0 10px rgba(68, 41, 10, 0.2);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .mobile-menu ul a:hover {
+            color: var(--color-accent);
+        }
+
+        section {
+            padding: 80px 2rem;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        section:nth-child(1) { animation-delay: 0s; }
+        section:nth-child(2) { animation-delay: 0.1s; }
+        section:nth-child(3) { animation-delay: 0.2s; }
+        section:nth-child(4) { animation-delay: 0.3s; }
+        section:nth-child(5) { animation-delay: 0.4s; }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            color: var(--color-primary);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.75rem;
+        }
+
+        #hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            color: white;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(213, 131, 27, 0.4);
+        }
+
+        .cta-btn:hover {
+            background: var(--color-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(213, 131, 27, 0.5);
+        }
+
+        #about {
+            background: white;
+        }
+
+        .about-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 24px rgba(68, 41, 10, 0.15);
+        }
+
+        .about-text h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+
+        #services {
+            background: var(--color-bg);
+        }
+
+        .services-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 6px 20px rgba(68, 41, 10, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(68, 41, 10, 0.2);
+        }
+
+        .service-card h3 {
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        #testimonials {
+            background: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--color-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--color-accent);
+            font-style: italic;
+            box-shadow: 0 4px 12px rgba(68, 41, 10, 0.08);
+        }
+
+        .testimonial-card p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--color-primary);
+            font-style: normal;
+        }
+
+        #contact {
+            background: var(--color-primary);
+            color: white;
+            text-align: center;
+        }
+
+        #contact h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .contact-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            line-height: 2;
+            margin: 2rem 0;
+        }
+
+        .contact-info strong {
+            color: var(--color-accent);
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid var(--color-accent);
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            border-color: white;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: var(--color-surface);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 1024px) {
+            section {
+                padding: 60px 1.5rem;
+            }
+
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            .about-split {
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            section {
+                padding: 48px 1rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .about-split {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                height: 300px;
+            }
+
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.6rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <div class="logo">MARDIV CAKES</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<div class="mobile-menu">
+    <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
+<section id="hero">
+    <img src="https://images.pexels.com/photos/34321369/pexels-photo-34321369.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Exquisite Wedding Cake" class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Welcome to MARDIV CAKES AND CATERING SERVICES</h1>
+        <p class="tagline">Creating Sweet Memories, One Cake at a Time</p>
+        <p>Your trusted partner for exquisite cakes and exceptional catering in Kaduna. From elegant wedding cakes to corporate catering events, we bring sweetness and satisfaction to every celebration.</p>
+        <a href="#contact" class="cta-btn">Order Your Perfect Cake Today</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <div class="about-split">
+            <img src="https://images.pexels.com/photos/29380150/pexels-photo-29380150.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Professional Bakery Kitchen" class="about-image">
+            <div class="about-text">
+                <h2>MARDIV CAKES AND CATERING SERVICES</h2>
+                <p>Located in the heart of Igabi, Kaduna, MARDIV CAKES AND CATERING SERVICES is your premier destination for custom-made cakes and comprehensive catering solutions. We specialize in creating memorable culinary experiences for weddings, birthdays, corporate events, and all special occasions.</p>
+                <p>Our expert bakers and caterers combine traditional Nigerian flavors with modern techniques to deliver products that not only look stunning but taste absolutely divine. Every cake is baked fresh to order, and every catering menu is tailored to your specific needs and preferences.</p>
+                <p>With years of experience serving the Kaduna community, we pride ourselves on quality ingredients, attention to detail, and customer satisfaction. Whether you need a simple birthday cake or full-service catering for 500 guests, MARDIV is here to make your event unforgettable.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <h2>What We Offer</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Custom Cakes</h3>
+                <p>Wedding cakes, birthday cakes, anniversary cakes, and celebration cakes designed to your exact specifications. Choose from vanilla, chocolate, red velvet, fruit cake, and more. Custom designs, fondant decorations, and edible prints available.</p>
+            </div>
+            <div class="service-card">
+                <h3>Catering Services</h3>
+                <p>Full-service catering for weddings, corporate events, parties, and social gatherings. Nigerian cuisine, continental dishes, small chops, buffet setups, and service staff available. Customizable menus to suit your budget and guest count.</p>
+            </div>
+            <div class="service-card">
+                <h3>Small Chops & Pastries</h3>
+                <p>Perfect for meetings, cocktails, and intimate gatherings. Includes puff puff, samosa, spring rolls, chicken wings, mini burgers, fish rolls, and assorted pastries. Fresh, hot, and delivered on time.</p>
+            </div>
+            <div class="service-card">
+                <h3>Corporate Catering</h3>
+                <p>Professional catering solutions for conferences, seminars, training sessions, and office events. Reliable service, quality food, and timely delivery guaranteed.</p>
+            </div>
+            <div class="service-card">
+                <h3>Event Planning Support</h3>
+                <p>We work with event planners and venues across Kaduna to ensure seamless coordination. Consultation services available to help you plan the perfect menu.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <div class="container">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"MARDIV made my wedding cake and it was absolutely stunning! Everyone kept asking where we got it from. The taste was even better than the design. Highly recommended!"</p>
+                <p class="testimonial-author">- Blessing O., Kaduna</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"We've used MARDIV for three corporate events now and they never disappoint. Professional service, delicious food, and always on time. They're our go-to caterers."</p>
+                <p class="testimonial-author">- Chinedu A., Business Executive</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"The best birthday cake my daughter has ever had! MARDIV brought her princess theme to life perfectly. Thank you for making her day special."</p>
+                <p class="testimonial-author">- Fatima M., Igabi</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"Outstanding catering service for our church anniversary. They fed over 300 people with such grace and excellence. God bless MARDIV!"</p>
+                <p class="testimonial-author">- Pastor John K., Kaduna</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="contact-content">
+            <h2>Get In Touch With MARDIV</h2>
+            <p>Ready to order your perfect cake or discuss your catering needs? We're here to help make your event exceptional.</p>
+            <div class="contact-info">
+                <p><strong>Visit Our Location:</strong><br>
+                #5 Mohammed Kida House opposite TCN Mando Kaduna, Igabi, Nigeria</p>
+                
+                <p><strong>Call or WhatsApp:</strong><br>
+                <a href="tel:07068157380">0706 815 7380</a></p>
+                
+                <p><strong>Business Hours:</strong><br>
+                Monday - Saturday: 8:00 AM - 6:00 PM<br>
+                Sunday: By Appointment Only</p>
+                
+                <p><strong>Note:</strong> Please place cake orders at least 72 hours in advance. For large catering events, we recommend booking 2-4 weeks ahead to ensure availability.</p>
+                
+                <p>We look forward to serving you!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<a href="https://wa.me/2347068157380" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 32 32" fill="white">
+        <path d="M16 0C7.164 0 0 7.164 0 16c0 2.825.742 5.597 2.154 8.047L.051 31.803l8.042-2.102A15.904 15.904 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm8.139 22.746c-.345.972-2.041 1.789-3.341 2.025-.891.156-2.048.281-5.948-1.269-4.992-1.984-8.206-7.031-8.456-7.351-.241-.319-2.009-2.669-2.009-5.094s1.269-3.606 1.731-4.103c.381-.416.994-.619 1.575-.619.188 0 .356.009.506.016.462.019.694.044 1.003.778.394.938 1.344 3.275 1.463 3.512.119.238.2.516.038.834-.156.325-.238.525-.475.806-.238.281-.5.631-.713.844-.238.238-.488.5-.206.978.281.469 1.256 2.069 2.694 3.35 1.85 1.65 3.406 2.163 3.891 2.406.381.194.85.163 1.131-.1.356-.331 1.013-1.256 1.281-1.688.194-.319.5-.269.844-.163.35.1 2.213 1.044 2.594 1.231.381.188.631.281.719.438.088.156.088.9-.256 1.869z"/>
+    </svg>
+</a>
+
+<footer>
+    <p>&copy; 2025 MARDIV CAKES AND CATERING SERVICES. All Rights Reserved.</p>
+</footer>
+
+<script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    }
+</script>
+
+</body>
+</html>
